@@ -1,0 +1,128 @@
+/*@import "loading.css";*/
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-color: #f2f2f2;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  padding: 2px;
+}
+
+#header {
+  background-color: #26a65b;
+  color: #ddd;
+  padding: 0.5em 0.5em;
+}
+
+#header.span {
+  background-color: #26a65b;
+  color: #ddd;
+  padding: 0.5em 0.5em;
+}
+
+#logo {
+  padding: 0em 0.5em;
+  float: left;
+  width: 100px;
+}
+
+#navbar {
+  position: relative;
+  padding: 0em 0.5em;
+  width: 100%;
+}
+
+#cart {
+  position: absolute;
+  right: 0.5em;
+  padding: 0em 0.5em;
+  background-color: #2ecc71;
+}
+
+#footer {
+  background-color: #26a65b;
+  color: #ddd;
+  text-align: center;
+  font-weight: 400;
+  font-size: 80%;
+}
+
+#airport {
+  color: #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  padding: 10px;
+  z-index: 1000;
+
+  -webkit-user-select: text;
+  -moz-select: text;
+  user-select: text;
+}
+
+#options-dialog {
+  background-color: rgba(15, 25, 20, 1);
+
+  box-shadow: 0 0 0 6px rgba(31, 65, 48, 1.0);
+  border-radius: 1px;
+
+  color: #ddd;
+  font-size: 12px;
+
+  position: absolute;
+  padding: 12px 15px;
+  top: 20%;
+  left: 50%;
+  margin-left: -240px;
+  width: 480px;
+  height: auto;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease;
+}
+
+#options-dialog.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#options-dialog span.option-description {
+    display: inline-block;
+    width: 45%;
+}
+
+#options-dialog span.option-selector {
+    position: absolute;
+    display: inline-block;
+    width: 45%;
+    right: 0px;
+}
+
+#options-dialog select {
+  background-color: rgba(15, 25, 20, 1);
+  padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+  border: 0;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}
+
+.option-type-select::after {
+  position: absolute;
+  pointer-events: none;
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%; margin-top: -.5em;
+}
